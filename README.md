@@ -46,7 +46,7 @@ python run/admm.py <path to dataset> --dataset=<dataset name>
 
 The \<path to dataset> argument should be the directory path where the *train* directory and *test* directory are located.
 
-### RFL-ADMM-HD
+### RFL-ADMM
 
 In the hybrid scenario, the number of horizontally split parts can be specified using the *client_num* argument, as shown below:
 
@@ -62,7 +62,7 @@ VFL-ADMM can be regarded as VFL-ADMM-Opt without computation reduction and commu
 python run/admm.py <path to dataset> --dataset=<dataset name> --simulate_VFL_ADMM=True
 ```
 
-### RFL-SGD-V/RFL-SGD-HD
+### RFL-SGD-V/RFL-SGD
 
 ```sh
 python run/sgd.py <path to dataset> --dataset=<dataset name> --opt
@@ -118,7 +118,7 @@ model:
     values: [Linear, MLP]
 ```
 
-We tested [RFL-ADMM-V, RFL-ADMM-HD, RFL-SGD-V, RFL-SGD-HD, VFL-ADMM, VFL-SGD, VFL-SGD-HD] in both DP(only feature DP and both feature DP and label DP) and non DP scenarios.
+We tested [RFL-ADMM-V, RFL-ADMM, RFL-SGD-V, RFL-SGD, VFL-ADMM, VFL-SGD, VFL-SGD-HD] in both DP(only feature DP and both feature DP and label DP) and non DP scenarios.
 
 ### Convergence Rates
 
