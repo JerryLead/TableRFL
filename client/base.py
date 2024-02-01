@@ -54,12 +54,12 @@ class Worker:
         imputer = SimpleImputer(strategy="mean")
         imputer.fit(self.train_data)
         self.train_data = imputer.transform(self.train_data)
-        if self._train_data is not None:
+        if hasattr(self, "_train_data"):
             self._train_data = imputer.transform(self._train_data)
         scaler = StandardScaler()
         scaler.fit(self.train_data)
         self.train_data = scaler.transform(self.train_data)
-        if self._train_data is not None:
+        if hasattr(self, "_train_data"):
             self._train_data = scaler.transform(self._train_data)
         self.imputer = imputer
         self.scaler = scaler
@@ -67,7 +67,7 @@ class Worker:
     def transform_test_data(self):
         self.test_data = self.imputer.transform(self.test_data)
         self.test_data = self.scaler.transform(self.test_data)
-        if self._test_data is not None:
+        if hasattr(self, "_test_data"):
             self._test_data = self.imputer.transform(self._test_data)
             self._test_data = self.scaler.transform(self._test_data)
 
