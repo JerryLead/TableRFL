@@ -68,7 +68,7 @@ python run/admm.py <path to dataset> --dataset=<dataset name> --simulate_VFL_ADM
 python run/sgd.py <path to dataset> --dataset=<dataset name> --opt
 ```
 
-### VFL-SGD/VFL-SGD-HD
+### VFL-SGD
 
 ```sh
 python run/sgd.py <path to dataset> --dataset=<dataset name>
